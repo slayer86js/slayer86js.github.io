@@ -1,0 +1,97 @@
+/*@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);*/
+
+body {
+    margin: 0;
+    background: rgb(58, 58, 58);
+}
+.menu-main, .listmenu {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 13px;
+}
+
+.menu-main {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+}
+
+.list-menu {
+    margin: 0;
+    padding: 0;
+    background: white;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    border-top: 1px solid #c6d0da;
+    transform: translateX(-60px);
+    transition: transform 0.3s, width 0.3s;
+}
+
+.open-list {
+    transform: translateX(0px);
+    width: 300px;
+}
+
+.list-menu div {
+    display: block;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #c6d0da;
+}
+
+.menu-main a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.icon-menu {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-right: 1px solid #c6d0da;
+    content: url("bars-solid.svg")
+}
+
+.icon-catalog::before {
+    content: url("book-solid.svg");
+}
+
+.icon-download::before {
+    content: url("arrow-alt-circle-down-regular.svg");
+}
+
+.icon-settings::before {
+    content: url("cog-solid.svg");
+}
+
+.icon-help::before {
+    content: url("question-circle-regular.svg");
+}
+
+.icon span {
+    width: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.menu-main a:hover, .list-menu div:hover {
+    background: rgb(136, 136, 163);
+    color: white;
+}
+
+.selected {
+    background: rgb(143, 190, 243);
+}

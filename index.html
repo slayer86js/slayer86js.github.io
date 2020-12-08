@@ -1,0 +1,41 @@
+"FlatSite" 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MusicStore</title>
+    <link type="text/css" rel="stylesheet" href="taskmenu1.css">
+</head>
+<body>
+    <div id="container">
+        <div id="menumain" class="menu-main">
+            <a id="icon" class="icon icon-menu"><span>Menu</span></a>
+            <div id="listmenu" class="list-menu">
+                <div><a class="icon icon-catalog">Catalog</a></div>
+                <div><a class="icon icon-download">Downloads</a></div>
+                <div><a class="icon icon-settings">Settings</a></div>
+                <div><a class="icon icon-help">Help</a></div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+<script>
+icon.addEventListener('click', () => {
+    if (!listmenu.classList.contains('open-list')) {
+        listmenu.classList.add('open-list');
+    } else {listmenu.classList.remove('open-list');}    
+});
+
+icon.addEventListener('mouseover', () => {listmenu.classList.add('open-list');})
+
+icon.addEventListener('click', () => {
+    if (listmenu.classList.contains('open-list')) {
+        icon.classList.add('selected');
+    } else {
+        icon.classList.remove('selected');
+    }
+})
+</script>
+</body>
+</html>
