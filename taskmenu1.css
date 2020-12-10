@@ -2,8 +2,50 @@
 
 body {
     margin: 0;
-    background: rgb(58, 58, 58);
+    background: rgb(0, 63, 105);
 }
+
+/*container*/
+
+.container > header,
+.codrops-top {
+	color: #fff;
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.container > header {
+	margin: 0 auto;
+	padding: 12em 2em;
+	padding-left: 370px;
+	background: rgba(0,0,0,0.05);
+}
+
+.container > header a {
+	color: #566473;
+	text-decoration: none;
+	outline: none;
+}
+
+.container > header a:hover {
+	color: #4f7bab;
+}
+
+.container > header h1 {
+	font-size: 3.2em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 55%;
+	color: #74818e;
+	padding: 0 0 0.6em 0.1em;
+}
+
+/*menu*/
+
 .menu-main, .listmenu {
     font-family: 'Lato', Arial, sans-serif;
     font-size: 13px;
@@ -23,75 +65,98 @@ body {
 .list-menu {
     margin: 0;
     padding: 0;
+    top: 60px;
     background: white;
     height: 100%;
     width: 60px;
     position: fixed;
-    border-top: 1px solid #c6d0da;
     transform: translateX(-60px);
     transition: transform 0.3s, width 0.3s;
+    border-top: 1px solid #c6d0da;
+    font-size: 18px;
+}
+
+.icon-menu {
+    display: block;
+    margin: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    border-right: 1px solid #c6d0da;
+    content: url("bars-solid.svg");
+    cursor: pointer;
+}
+
+.icon-menu:hover, .list-menu div:hover {
+    background: rgb(103, 136, 151);
+    color: white;
 }
 
 .open-list {
     transform: translateX(0px);
-    width: 300px;
+    width: 60px;
 }
 
 .list-menu div {
-    display: block;
+    display: flex;
     height: 60px;
     width: 100%;
+    color: rgb(0, 36, 134);
     border-bottom: 1px solid #c6d0da;
+    cursor: pointer;
+    align-items: center;
+    overflow: hidden;
 }
 
-.menu-main a {
+.list-menu div span {
+    padding: 50px;
+    overflow: hidden;
+}
+
+.menu-main i {
     display: block;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .icon {
     width: 30px;
     height: 30px;
-    text-align: center;
+    margin-left: 15px;
+    position: relative;
 }
 
 .icon-menu {
     display: block;
+    margin: 0;
+    top:0;
     width: 60px;
     height: 60px;
     border-right: 1px solid #c6d0da;
-    content: url("bars-solid.svg")
+    content: url("bars-solid.svg");
+    cursor: pointer;
 }
 
-.icon-catalog::before {
+.icon-catalog {
     content: url("book-solid.svg");
 }
 
-.icon-download::before {
+.icon-download {
     content: url("arrow-alt-circle-down-regular.svg");
 }
 
-.icon-settings::before {
+.icon-settings {
     content: url("cog-solid.svg");
 }
 
-.icon-help::before {
+.icon-help {
     content: url("question-circle-regular.svg");
-}
-
-.icon span {
-    width: 0;
-    height: 0;
-    display: block;
-    overflow: hidden;
-}
-
-.menu-main a:hover, .list-menu div:hover {
-    background: rgb(136, 136, 163);
-    color: white;
 }
 
 .selected {
     background: rgb(143, 190, 243);
+}
+
+.list-menu:hover {
+    width: 370px;
+    overflow: visible;
 }
